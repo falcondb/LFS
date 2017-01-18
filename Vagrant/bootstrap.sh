@@ -6,6 +6,7 @@ yum update
 
 ### GNU autobuild ####
 yum install -y gcc
+yum install -y gcc-c++
 yum install -y autoconf
 yum install -y automake
 
