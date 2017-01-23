@@ -29,6 +29,6 @@ cd bison-2.5.1 && \
 ./configure --prefix=/usr/local/bison && \
 make && sudo make install && cd ..
 
-yum install -y findutils diffutils gawk patch perl texinfo xz
+yum install -y findutils diffutils gawk patch perl texinfo xz byacc
 
 
