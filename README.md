@@ -1,2 +1,2 @@
 # LFS
-Linux from scratch
+Linux from scratch http://www.linuxfromscratch.org/index.html
