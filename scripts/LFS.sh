@@ -3,6 +3,12 @@ mkdir -vp $LFS
 mkdir -vp $LFS/usr $LFS/sources $LFS/tools
 ln -sv $LFS/tools /
 
+pushd .
+cd web-v7-10
+./setup-all.sh
+
+popd
+
 groupadd lfs
 useradd -s /bin/bash -g lfs -m -k /dev/null lfs
 
@@ -23,4 +29,5 @@ LFS_TGT=$(uname -m)-lfs-linux-gnu
 PATH=/tools/bin:/bin:/usr/bin
 export LFS LC_ALL LFS_TGT PATH
 EOF
+
 
