@@ -1,17 +1,4 @@
 #!/bin/bash
-set -x -e 
-
-RED='\033[0;31m'
-GREEN='\033[0;32m'
-NC='\033[0m'
-
-[[ -z $LFS ]] && exit
-
-[[ -z $LFS_TGT ]] && exit
-
-lfssources=$LFS/sources/
-
-su lfs
 
 function info(){
 	echo -e "${GREEN}$1${NC}"
@@ -200,7 +187,22 @@ install_glibc(){
 	info "Building Glibc is done..."
 }
 
+set -x -e 
+
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+NC='\033[0m'
+
+[[ -z $LFS ]] && exit
+
+[[ -z $LFS_TGT ]] && exit
+
+lfssources=$LFS/sources/
+
+su lfs
+
 install_binutils
 install_gcc
 install_linux_API_headers
 install_glibc
+
